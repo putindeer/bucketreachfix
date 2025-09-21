@@ -64,10 +64,5 @@
             <version>1.21.8-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>ga.strikepractice</groupId>
-            <artifactId>strikepractice-api</artifactId>
-            <systemPath>${project.basedir}/libs/strikepractice-api.jar</systemPath>
-        </dependency>
     </dependencies>
 </project>
