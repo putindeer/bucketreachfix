@@ -4,7 +4,7 @@ import io.github.putindeer.bucketreachfix.Main;
 import org.bukkit.event.Listener;
 import org.bukkit.event.EventHandler;
 import org.bukkit.entity.Player;
-import io.github.strikepractice.api.events.FightEndEvent;
+import ga.strikepractice.event.FightEndEvent;
 
 public class StrikePractice implements Listener {
     private final Main plugin;
