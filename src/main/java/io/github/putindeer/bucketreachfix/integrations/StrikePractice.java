@@ -2,6 +2,9 @@ package io.github.putindeer.bucketreachfix.integrations;
 
 import io.github.putindeer.bucketreachfix.Main;
 import org.bukkit.event.Listener;
+import org.bukkit.event.EventHandler;
+import org.bukkit.entity.Player;
+import io.github.strikepractice.api.events.FightEndEvent;
 
 public class StrikePractice implements Listener {
     private final Main plugin;
@@ -12,14 +15,7 @@ public class StrikePractice implements Listener {
 
     @EventHandler
     public void onFightEnd(FightEndEvent event) {
-        Player winner = event.getWinner();
-        Player loser = event.getLoser();
-
-        if (winner != null) {
-            plugin.removeFluidBoost(winner);
-        }
-        if (loser != null) {
-            plugin.removeFluidBoost(loser);
-        }
+        List<Player> players = event.getMatch().getPlayers();
+        players.forEach(player -> plugin.removeFluidBoost(player));
     }
 }
