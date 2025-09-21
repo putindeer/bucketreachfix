@@ -1,5 +1,6 @@
 package io.github.putindeer.bucketreachfix;
 
+import io.github.putindeer.bucketreachfix.integrations.StrikePractice;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
@@ -23,6 +24,9 @@ public final class Main extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(this, this);
+        if (Bukkit.getPluginManager().getPlugin("StrikePractice") != null && Bukkit.getPluginManager().isPluginEnabled("StrikePractice")) {
+            Bukkit.getPluginManager().registerEvents(new StrikePractice(this), this);
+        }
     }
 
     @Override
