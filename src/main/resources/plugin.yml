@@ -1,0 +1,4 @@
+name: bucketreachfix
+version: '1.0'
+main: io.github.putindeer.bucketreachfix.Main
+api-version: '1.21'
